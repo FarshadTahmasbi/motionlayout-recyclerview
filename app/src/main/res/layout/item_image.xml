@@ -12,7 +12,8 @@
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/img"
         android:layout_width="0dp"
-        android:layout_height="300dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="6:10"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

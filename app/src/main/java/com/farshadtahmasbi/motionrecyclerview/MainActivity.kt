@@ -46,11 +46,6 @@ class MainActivity : AppCompatActivity(), CharacterAdapter.OnItemClickListener {
     private fun init() {
         setupAdapter()
         rv_image.addOnItemTouchListener(itemTouchInterceptor)
-//        view_dim.setOnClickListener {
-//            if (it.alpha == 1.0f) {
-//                motion.transitionToStart()
-//            }
-//        }
     }
 
     private fun setupAdapter() {
@@ -59,8 +54,10 @@ class MainActivity : AppCompatActivity(), CharacterAdapter.OnItemClickListener {
     }
 
     override fun onItemClick(view: View, position: Int, data: CharacterAdapter.Data) {
-        val cardView = view as? ViewGroup
-        val img = cardView?.run { findViewById<AppCompatImageView>(R.id.img) } ?: return
+        val viewGroup = view as? ViewGroup
+        val img = viewGroup?.run { findViewById<AppCompatImageView>(R.id.img) } ?: return
+
+        img_header.load(data.headerRes)
 
         val rect = Rect()
         img.getLocalVisibleRect(rect)
@@ -70,17 +67,9 @@ class MainActivity : AppCompatActivity(), CharacterAdapter.OnItemClickListener {
             else -> CLIP_BOTTOM
         }
 
-//        val marginTop = when(clipType){
-//            CLIP_TOP -> 0
-//            else -> rect.top
-//        }
-//        val marginBottom = when(clipType){
-//            CLIP_TOP -> x
-//            else -> 0
-//        }
         Log.d(TAG, "clip type: $clipType")
         motion.offsetDescendantRectToMyCoords(img, rect)
-        Log.d(TAG, "localVisibleRect in parent system: $rect")
+        Log.d(TAG, "localVisibleRect in parent coord system: $rect")
 
         val set = motion.getConstraintSet(R.id.start)
         set.clear(R.id.img_motion)
@@ -112,14 +101,12 @@ class MainActivity : AppCompatActivity(), CharacterAdapter.OnItemClickListener {
 
         img.alpha = 0.0f
         img_motion.visibility = View.VISIBLE
-//        motion.img_motion.setImageDrawable(img.drawable)
-        motion.img_motion.setBackgroundColor(Color.RED)
+        motion.img_motion.setImageDrawable(img.drawable)
         motion.apply {
             updateState(R.id.start, set)
             setTransition(R.id.start, R.id.end)
             setTransitionListener({ start, end ->
                 itemTouchInterceptor.enable()
-                Log.d("test123", "transition started!")
                 if (start == startState) {
                     img.alpha = 0.0f
                     img_motion.alpha = 1.0f

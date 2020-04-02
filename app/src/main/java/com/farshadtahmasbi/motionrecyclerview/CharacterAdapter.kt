@@ -48,7 +48,7 @@ class CharacterAdapter(
 
         fun bind(data : Data){
             this.data = data
-            Glide.with(itemView.context).load(data.imageRes).into(itemView.img)
+            itemView.img.load(data.imageRes)
         }
     }
 
