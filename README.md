@@ -4,7 +4,7 @@ This code sample is related to this meduim article: MotionLayout and RecyclerVie
 
 
 
- <p align="center">
+ <p align="left">
   <img src="raw/preview.gif">
 </p>
 
