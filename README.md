@@ -8,4 +8,4 @@ This code sample is related to this meduim article: MotionLayout and RecyclerVie
   <img src="raw/preview.gif">
 </p>
 
-Inspired by [Jason Pearson sample](https://github.com/kaeawc/motion-recycle), Thanks to him
+Inspired by [Jason Pearson sample](https://github.com/kaeawc/motion-recycle), Thanks to him.
