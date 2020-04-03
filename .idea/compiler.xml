@@ -3,6 +3,7 @@
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel>
       <module name="MotionRecyclerView.app" target="1.8" />
+      <module name="projects.MotionRecyclerView.app" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
