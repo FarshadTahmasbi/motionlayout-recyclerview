@@ -60,10 +60,6 @@ class MainActivity : AppCompatActivity(), CharacterAdapter.OnItemClickListener {
 
         img_header.load(data.headerRes)
         text_title.text = getString(data.title)
-//        val desc = getString(data.desc).run {
-//            if (length < DESC_MAX_LENGTH) this
-//            else substring(0, DESC_MAX_LENGTH) + if (length > DESC_MAX_LENGTH) "…" else ""
-//        }
         text_desc.text = getString(data.desc)
 
         val rect = Rect()

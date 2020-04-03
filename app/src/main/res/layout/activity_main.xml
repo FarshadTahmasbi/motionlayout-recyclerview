@@ -12,9 +12,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        tools:ignore="MissingConstraints">
 
         <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
@@ -31,14 +29,11 @@
         android:clipToPadding="false"
         android:padding="4dp"
         android:splitMotionEvents="false"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar"
         app:spanCount="3"
         tools:itemCount="10"
         tools:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        tools:listitem="@layout/item_image" />
+        tools:listitem="@layout/item_image"
+        tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/img_header"
@@ -48,7 +43,7 @@
         android:scaleType="fitCenter"
         tools:ignore="MissingConstraints" />
 
-    <TextView
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/text_title"
         android:layout_width="wrap_content"
         android:fontFamily="sans-serif-black"
