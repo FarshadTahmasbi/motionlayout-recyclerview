@@ -3,6 +3,7 @@ package com.farshadtahmasbi.motionrecyclerview
 import android.graphics.Color
 import android.graphics.Rect
 import android.os.Bundle
+import android.text.method.ScrollingMovementMethod
 import android.util.Log
 import android.view.View
 import android.view.ViewGroup
@@ -58,6 +59,12 @@ class MainActivity : AppCompatActivity(), CharacterAdapter.OnItemClickListener {
         val img = viewGroup?.run { findViewById<AppCompatImageView>(R.id.img) } ?: return
 
         img_header.load(data.headerRes)
+        text_title.text = getString(data.title)
+//        val desc = getString(data.desc).run {
+//            if (length < DESC_MAX_LENGTH) this
+//            else substring(0, DESC_MAX_LENGTH) + if (length > DESC_MAX_LENGTH) "…" else ""
+//        }
+        text_desc.text = getString(data.desc)
 
         val rect = Rect()
         img.getLocalVisibleRect(rect)

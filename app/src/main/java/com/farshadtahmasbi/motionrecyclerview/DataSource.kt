@@ -101,6 +101,7 @@ class DataSource {
                     R.string.deadshot_desc
                 )
             )
+            shuffle()
         }
     }
 }

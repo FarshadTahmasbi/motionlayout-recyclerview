@@ -12,7 +12,6 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:elevation="0dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -24,14 +23,6 @@
             app:titleTextColor="#fff" />
 
     </com.google.android.material.appbar.AppBarLayout>
-
-    <TextView
-        android:id="@+id/text_desc"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:padding="16dp"
-        android:text="@string/joker_desc"
-        tools:ignore="MissingConstraints" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_image"
@@ -54,15 +45,26 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="@color/colorPrimary"
-        android:scaleType="centerCrop"
+        android:scaleType="fitCenter"
         tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/text_title"
         android:layout_width="wrap_content"
+        android:fontFamily="sans-serif-thin"
+        android:textStyle="bold"
+        android:padding="8dp"
         android:layout_height="wrap_content"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@android:color/white"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/text_desc"
+        android:textColor="@android:color/white"
+        android:layout_width="0dp"
+        android:textSize="14sp"
+        android:layout_height="0dp"
         tools:ignore="MissingConstraints" />
 
     <androidx.appcompat.widget.AppCompatImageView
