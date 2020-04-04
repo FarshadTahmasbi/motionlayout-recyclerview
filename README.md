@@ -6,4 +6,4 @@ This sample code is related to this meduim article: [MotionLayout and RecyclerVi
   <img src="raw/preview.gif">
 </p>
 
-Inspired by [Jason Pearson sample](https://github.com/kaeawc/motion-recycle), Thanks to him
+Inspired by [Jason Pearson's sample](https://github.com/kaeawc/motion-recycle), Thanks to him
