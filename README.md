@@ -1,6 +1,6 @@
 
 # MotionLayout and RecyclerView
-This code sample is related to this meduim article: [MotionLayout and RecyclerView](https://medium.com/@farshad.tahmasbi/motionlayout-and-recyclerview-eab2dbca4fe4)
+This sample code is related to this meduim article: [MotionLayout and RecyclerView](https://medium.com/@farshad.tahmasbi/motionlayout-and-recyclerview-eab2dbca4fe4)
 
  <p align="left">
   <img src="raw/preview.gif">
